@@ -34,7 +34,7 @@ Ensure you have the following installed:
 ### Installation Steps  
 1. **Clone the Repository**  
    ```bash  
-   git clone https://github.com/username/taskmanager.git  
+   git clone https://github.com/TSB04/taskManager
    ```  
 
 2. **Open in Android Studio**  
