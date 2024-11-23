@@ -95,8 +95,8 @@ This project is licensed under the [MIT License](LICENSE).
 ## 📬 Contact  
 Have questions or suggestions? Feel free to reach out!  
 **Your Name**  
-- Email: [your.email@example.com](mailto:your.email@example.com)  
-- GitHub: [YourGitHubProfile](https://github.com/YourGitHubProfile)  
+- Email: [twizfouiny@gmail.com](mailto:twizfouiny@gmail.com)  
+- GitHub: [tsb04](https://github.com/tsb04)  
 
 ---
 
