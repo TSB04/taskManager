@@ -2,4 +2,11 @@
 <resources>
     <item name="recyclerViewTasks" type="id" />
     <item name="fabAddTask" type="id" />
+    <item name="taskCategory" type="id" />
+    <item name="editTextTaskName" type="id"/>
+    <item name="editTextCategory" type="id" />
+    <!-- <item name="textViewTaskName" type="id" />
+     <item name="textViewCategory" type="id" />-->
+
+
 </resources>

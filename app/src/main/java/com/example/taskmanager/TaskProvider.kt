@@ -4,9 +4,13 @@ import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
+import android.util.Log
 
 class TaskProvider : ContentProvider() {
+
     override fun onCreate(): Boolean {
+        // Initialization logic (if needed)
+        Log.d("TaskProvider", "TaskProvider initialized")
         return true
     }
 
@@ -17,26 +21,36 @@ class TaskProvider : ContentProvider() {
         selectionArgs: Array<out String>?,
         sortOrder: String?
     ): Cursor? {
-        // Logique pour partager les tâches
+        Log.d("TaskProvider", "Query not implemented")
         return null
     }
 
     override fun insert(uri: Uri, values: ContentValues?): Uri? {
-        // Logique d'insertion
+        Log.d("TaskProvider", "Insert not implemented")
         return null
     }
 
-    override fun update(uri: Uri, values: ContentValues?, selection: String?, selectionArgs: Array<out String>?): Int {
-        // Logique de mise à jour
+    override fun update(
+        uri: Uri,
+        values: ContentValues?,
+        selection: String?,
+        selectionArgs: Array<out String>?
+    ): Int {
+        Log.d("TaskProvider", "Update not implemented")
         return 0
     }
 
-    override fun delete(uri: Uri, selection: String?, selectionArgs: Array<out String>?): Int {
-        // Logique de suppression
+    override fun delete(
+        uri: Uri,
+        selection: String?,
+        selectionArgs: Array<out String>?
+    ): Int {
+        Log.d("TaskProvider", "Delete not implemented")
         return 0
     }
 
     override fun getType(uri: Uri): String? {
+        Log.d("TaskProvider", "GetType not implemented")
         return null
     }
 }

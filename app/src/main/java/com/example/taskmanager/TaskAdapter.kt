@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-/*class TaskAdapter(private val taskList: List<String>) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
-    class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val taskTitle: TextView = itemView.findViewById(R.id.taskTitle)
-    }
+class TaskAdapter(
+    private val tasks: List<Task>,
+    private val onTaskLongClick: (Int) -> Unit
+) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_task, parent, false)
@@ -17,35 +17,25 @@ import androidx.recyclerview.widget.RecyclerView
     }
 
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
-        holder.taskTitle.text = taskList[position]
+        val task = tasks[position]
+        holder.bind(task, onTaskLongClick)
     }
 
-    override fun getItemCount() = taskList.size
-}*/
+    override fun getItemCount() = tasks.size
 
-class TaskAdapter(private var tasks: List<String>) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
-
-    // ViewHolder for task items
     class TaskViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val taskTextView: TextView = itemView.findViewById(R.id.taskTitle)
-    }
+        private val textViewTaskName: TextView = itemView.findViewById(R.id.editTextTaskName)
+        private val textViewCategory: TextView = itemView.findViewById(R.id.editTextCategory)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_task, parent, false)
-        return TaskViewHolder(itemView)
-    }
+        fun bind(task: Task, onTaskLongClick: (Int) -> Unit) {
+            textViewTaskName.text = task.name
+            textViewCategory.text = task.category
 
-    override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
-        holder.taskTextView.text = tasks[position]
-    }
-
-    override fun getItemCount(): Int {
-        return tasks.size
-    }
-
-    // Method to update the tasks list when a new task is added
-    fun updateTasks(newTasks: List<String>) {
-        this.tasks = newTasks
-        notifyDataSetChanged()
+            // Handle long-click for deletion
+            itemView.setOnLongClickListener {
+                onTaskLongClick(adapterPosition)
+                true
+            }
+        }
     }
 }

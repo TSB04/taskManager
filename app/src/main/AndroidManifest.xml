@@ -2,8 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.taskmanager"> <!-- Ensure this matches your project's package name -->
 
+    <!-- Optional: Define permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -21,5 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Additional activities or services go here if needed -->
     </application>
 </manifest>
