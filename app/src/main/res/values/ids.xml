@@ -5,8 +5,11 @@
     <item name="taskCategory" type="id" />
     <item name="editTextTaskName" type="id"/>
     <item name="editTextCategory" type="id" />
-    <!-- <item name="textViewTaskName" type="id" />
-     <item name="textViewCategory" type="id" />-->
+     <item name="textViewTaskName" type="id" />
+     <item name="textViewCategory" type="id" />
+    <item name="textTaskName" type="id" />
+    <item name="textTaskCategory" type="id" />
+    <item name="buttonDeleteTask" type="id" />
 
 
 </resources>

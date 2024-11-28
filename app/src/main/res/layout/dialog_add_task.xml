@@ -1,29 +1,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-    <!-- Task Name Input -->
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
     <EditText
         android:id="@+id/editTextTaskName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/task_name"
-        android:inputType="textCapWords"
-        android:importantForAutofill="yes"
-        android:autofillHints="taskName"
-        android:imeOptions="actionNext" />
-
-    <!-- Category Input -->
+        android:hint="Nom de la tâche" />
     <EditText
         android:id="@+id/editTextCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/category"
-        android:inputType="textCapWords"
-        android:importantForAutofill="yes"
-        android:autofillHints="category"
-        android:imeOptions="actionDone" />
-
+        android:hint="Catégorie (optionnel)" />
 </LinearLayout>
